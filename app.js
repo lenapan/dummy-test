@@ -20,4 +20,4 @@ app.post('/api/Titles', mongo2.addTitles);
 app.get('/api/Comments', mongoPractice.getComments);
 app.get('/api/Titles', mongo2.retrieveTitles);
 
-app.listen(5000 || process.env.PORT); //Heroku provides port
+app.listen(process.env.PORT || 5000); //Heroku provides port
