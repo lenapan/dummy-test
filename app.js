@@ -2,6 +2,7 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const mongoPractice = require('./mongo');
 const mongo2 = require('./mongo2');
+const mongo3 = require('./mongo3');
 
 const app = express();
 
