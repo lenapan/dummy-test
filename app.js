@@ -16,8 +16,10 @@ app.use((req, res, next) => {
 })
 app.post('/api/Comments', mongoPractice.ADD);
 app.post('/api/Titles', mongo2.addTitles);
+app.post('/api/Name', mongo3.addName);
 
 app.get('/api/Comments', mongoPractice.getComments);
 app.get('/api/Titles', mongo2.retrieveTitles);
+app.get('/api/Name', mongo3.getName);
 
 app.listen(process.env.PORT || 5000); //Heroku provides port
