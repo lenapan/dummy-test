@@ -25,15 +25,12 @@ const ADD= async (req, res, next) => {
 const getComments = async (req, res, next) => {
   const client = new MongoClient(url, { useNewUrlParser: true, useUnifiedTopology: true });
 
-  let Comments; // if this variable name doesn't match a collection in the database, it doesn't seem to work
+  let Comments;
 
   try {
     await client.connect();
     const db = client.db();
     Comments = await db.collection('Comments').find().toArray();
-    // for (var i = 0; i < Comments.length; i++){ 
-    //   console.log(`${Comments[i].user} says "${Comments[i].comment}"`);
-    // }
   } catch (error) {
     return res.json({message: 'Could not retrieve comments.'});
   };

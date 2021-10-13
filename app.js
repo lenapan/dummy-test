@@ -23,4 +23,6 @@ app.get('/api/Comments', mongoPractice.getComments);
 app.get('/api/Titles', mongo2.retrieveTitles);
 app.get('/api/Name', mongo3.getName);
 
+app.delete('/api/Titles', mongo2.deleteTitles);
+
 app.listen(process.env.PORT || 5000); //Heroku provides port
